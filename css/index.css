@@ -1,3 +1,338 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/* Set every element's box-sizing to border-box */
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+/* Copy and paste your work from yesterday here and start to refactor into flexbox */
+.wholeContainer{
+	margin: 0 auto;
+	margin: 1% 25% 5% 25%;
+	padding: 40px;
+	border: 1px solid black;
+}
+
+/* Section for Nav bar*/
+nav{
+	display: flex;
+	width: 100%;
+	height: 7vh;
+	justify-content: space-around;
+	align-items: center;
+}
+.links{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    width: 100%;
+}
+.logo{
+    width: 100%;
+    height: 4vh;
+}
+nav a{
+    justify-content: space-around;
+    align-items: center;
+	color: grey;
+	text-decoration: none;
+}
+
+
+
+/* Section for Header*/
+header{
+	display: flex;
+	width: 100%;
+	height: 45vh;
+	justify-content: space-around;
+	align-items: center;
+}
+h1{
+	font-size: 70px;
+	text-align: center;
+	
+}
+.alignButton a{
+	text-decoration: none;
+	color: black;
+	border: 1px solid black;
+	padding: 1% 7% 1% 7%;
+}
+header .alignButton{
+	display: flex;
+	width: 50%;
+	height: 45vh;
+	flex-direction: column;
+	align-items: center;
+	margin: 20% 0% 0% 0%;
+}
+header img {
+    width: 95%;
+}
+header .mainTitle{
+    width: 95%;
+}
+
+/* Section for Top Section*/
+.topSection{
+	display: flex;
+	width: 100%;
+	height: 20vh;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+
+
+/* Section for Image Seperator and Section Seperator*/
+.imageSeperator{
+	display: flex;
+	width: 100%;
+	height: 15vh;
+}
+hr.thin {
+	height: 1px;
+	border: 0;
+	color: #333;
+	background-color: #333;
+	width: 100%;
+}
+hr.thin2 {
+	height: 4px;
+	color: #333;
+	background-color: #333;
+	width: 100%;
+}
+
+
+/* Section for Middle Section*/
+.middleSection{
+	display: flex;
+	width: 100%;
+	height: 25vh;
+	justify-content: space-around;
+	align-items: center;
+}
+
+
+
+/* Section for Contact*/
+.contact{
+	display: flex;
+	width: 100%;
+	height: 20vh;
+  	flex-direction: column;
+	align-items: flex-start;
+	justify-content: center;   
+}
+
+
+
+/* Section for Copyright*/
+footer{
+	display: flex;
+	width: 100%;
+	height: 3vh;
+	align-items: center;
+	justify-content: space-around;
+	width: 100%;
+	font-size: 10px;	
+}
+
+/* media queries */
+@media (max-width: 800px){
+    .wholeContainer{
+        margin: 0;
+        padding: 5% 0 0 0;
+        border: 1px solid black; 
+    }
+    nav{
+        height: 10vh;
+        display: flex;
+        flex-direction: column-reverse;
+        justify-content: space-around;
+        align-items: center;
+    }
+    .links{
+        justify-content: space-evenly;
+    }
+    .logo{
+        margin: 0 0 10% 0;
+    }
+    header{
+        display: flex;
+        width: 100%;
+        height: 55vh;
+        justify-content: center;
+        align-items: center;
+        margin: 0;
+        padding: 0;
+    }
+    .headerImg{
+        display: none;
+        margin: 0;
+        padding: 0;
+    }
+    header .mainTitle{
+        margin: 0 0 5% 0;
+        padding: 0;
+        justify-content: center;
+        align-items: center;
+    }
+    hr.thin{
+        width: 85%;
+    }
+    
+    header .alignButton{
+        display: flex;
+        width: 90%;
+        height: 55vh;
+        flex-direction: column;
+        align-items: center;
+        margin: 20% 0% 0% 0%;
+    }
+    .topSection{
+        width: 80%;
+        height: 20vh;
+        justify-content: space-evenly;
+        align-items: center;
+        margin: 0 0 0 10%;
+    }
+    .middleSection div{
+        width: 30%;
+    }
+    .middleSection{
+        height: 27vh;
+        width: 85%;
+        margin: 0 0% 0 8%;
+    }
+    .imageSeperator{
+        width: 85%;
+        margin: 0 0 0 7%;
+    }
+    .contact{
+        width: 80%;
+        margin: 0 0 0 10%;
+        height: 25vh;
+    }
+    footer{
+        height: 10vh;
+    }
+}
+@media (max-width: 500px){
+    nav{
+        height: 50vh;
+    }
+    .links{
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .links a{
+        text-align: center;
+        width: 70%;
+        border-bottom: 1px solid black;
+        margin: 0% 0;
+        justify-content: center;
+        align-items: center;
+        padding: 4% 0 4% 0;
+    }
+    .topBorder{
+        border-top: 1px solid black;
+        padding: 20% 0 5% 0;
+    }
+    
+    .logo{
+        margin: 0;
+    }
+    header{
+        margin: 20% 0 0 0;
+        height: 30vh;
+    }
+    h1{
+        font-size: 60px;
+    }
+    .topSection{
+        height: 45vh;
+        flex-direction: column;
+        width: 70%;
+    }
+    hr.thin{
+        width: 80%;
+    }
+    .imageSeperator{
+        width: 80%;
+        margin: 0 0 0 10%;
+    }
+    .middleSection{
+        height: 65vh;
+        flex-direction: column;
+        width: 70%;
+        margin: 0 0 0 10%;
+    }
+    .middleSection div{
+        width: 100%;
+    }
+}
 
 
